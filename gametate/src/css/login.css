@@ -1,0 +1,373 @@
+:root {
+    --modo_claro-color: #48bfe3;
+
+    --modo_claro-color-GameTaTe-secundario: #293241;
+    --modo_claro-color-GameTaTe-primario: white;
+    --modo_claro-color-GameTaTe-boton: var(--modo_claro-color-GameTaTe-secundario);
+
+    --modo_oscuro-color-GameTaTe-primario: #34495e;
+    --modo_oscuro-color-GameTaTe-secundario: #028090;
+    --modo_oscuro-color-GameTaTe-boton: #02c39a;
+}
+
+* {
+    list-style: none;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0;
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+    background-image: url(https://marketplace.canva.com/EAFr_WD_eVs/1/0/1600w/canva-green-illustrated-mystical-forest-desktop-wallpaper-iV9Rcl-aVnA.jpg);
+    height: 100vh;
+    background-size: 65% 100%;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+}
+
+#slogan {
+    color: white;
+    font-size: 4em;
+    align-self: center;
+    margin: auto;
+    background: #000b;
+    border: 1px solid var(--modo_claro-color);
+}
+
+#slogan a {
+    border: 1px solid var(--modo_claro-color);
+    border-radius: 1em;
+    color: #48bfe3;
+    background: var(--modo_claro-color-GameTaTe-secundario);
+    padding: 2%;
+    font-size: .7em;
+    text-decoration: none;
+    transition: all .5s ease;
+}
+
+#slogan a:hover {
+    background: var(--modo_oscuro-color-GameTaTe-primario);
+    color: #72efdd;
+}
+
+.login-box {
+    background: var(--modo_claro-color-GameTaTe-secundario);
+    width: 35%;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: auto;
+    border-left: 1px solid #34495e;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2em;
+}
+
+.login-box__form {
+    display: flex;
+    flex-direction: column;
+    margin: 2%;
+    gap: 1em;
+}
+
+.login-box__form-label {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: var(--modo_claro-color);
+}
+
+.input-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+}
+
+.step--hidden {
+    display: none;
+}
+
+.login-box__form-input {
+    padding: 1.5em;
+    margin: 1em;
+    border: none;
+    background: var(--modo_oscuro-color-GameTaTe-primario);
+    outline: 1px solid var(--modo_claro-color);
+    color: white;
+    font-size: 1.5em;
+}
+
+.login-box__form-preview {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#imagePreview {
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 1em;
+    z-index: 10000;
+    width: 140px;
+    height: 140px;
+    border: var(--modo_claro-color) 2px solid;
+    transition: background .3s;
+}
+
+#imagePreview:hover {
+    background: var(--modo_oscuro-color-GameTaTe-secundario);
+}
+
+.login-box__form-preview img {
+    border-radius: 50%;
+    position: absolute;
+    margin: 1em;
+    width: 140px;
+    height: 140px;
+    border: var(--modo_claro-color) 2px solid;
+}
+
+.login-box__form-avatar {
+    display: none;
+}
+
+.login-box__form-input:focus {
+    outline: var(--modo_oscuro-color-GameTaTe-boton) 2px solid;
+}
+
+.login-box__form-span--validError {
+    color: #f55;
+    font-size: 14px;
+    margin-bottom: .8em;
+}
+
+.login-box__form-button {
+    background: var(--modo_claro-color-GameTaTe-secundario);
+    border: var(--modo_claro-color) 1px solid;
+    position: relative;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 2em;
+    font-weight: bold;
+    font-size: 1.5em;
+    transition: .5s ease all;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--modo_claro-color);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.login-box__form-button:hover {
+    background:#72efdd;
+}
+
+.login-box__form-button-span {
+    color: var(--modo_claro-color);
+    position: absolute;
+    transition: all .5s ease; 
+    left: 44%;
+}
+
+.login-box__form-button:hover .login-box__form-button-span {
+    left: 40%;
+}
+
+.login-box__form-button-span--arrow {
+    color: var(--modo_claro-color);
+    position: absolute;
+    opacity: 0;
+    left: 45%;
+    font-size: 1.5em;
+    transition: all .5s ease; 
+
+}
+
+.login-box__form-button:hover .login-box__form-button-span--arrow {
+    left: 55%;
+    opacity: 1;
+}
+
+.login-box__form-span {
+    display: flex;
+    margin: 5%;
+}
+
+.login-box__form-span-chkbox {
+    margin-left: 5%;
+}
+        
+.acc {
+    display: flex;
+    justify-content: center;
+}
+
+.acc span {
+    font-size: 1.5em;
+    margin: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.acc a {
+    color: var(--modo_oscuro-color-GameTaTe-boton);
+}
+
+
+.formulario {
+    padding: 4%;
+    background: #ecf0f1;
+    border: none;
+    border-radius: 3% ;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    line-height: 12px;
+    width: 300px;
+}
+
+.fake_placeholder {
+    position: relative;
+}
+
+.placeholder {
+    position: absolute;
+    color: black;
+    left: 12px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.boton.uno svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    fill: none;
+}
+
+.boton.uno rect {
+    width: 100%;
+    height: 100%;
+    stroke: #000;
+    stroke-width: 10px;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    transition: .6s ease all;
+}
+
+.boton.uno:hover rect {
+    stroke-dashoffset: 0;
+}
+
+input[type=checkbox] {
+    cursor: pointer;
+}
+
+.login-box__form-div--terms {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+.login-box__form-div--terms a {
+    color: white;
+}
+
+/* Pie de Pagina */
+footer {
+width: 100%;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+}
+
+.about li {
+    padding: 2%;
+}
+
+.about a {
+    color: black;
+}
+
+.about a:hover {
+    border-bottom: 1px solid black;
+}
+
+.social {
+    display: flex;
+    padding-top: 2%;
+    justify-content: space-between;
+    margin: auto;
+    width: 40%;
+    height: 50px;
+}
+
+.social li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    font-size: 2.5em;
+}
+
+.social i:hover {
+    font-size: 2em;
+}
+
+
+/* responsive */
+
+@media (max-width: 800px) {
+
+    body {
+        background-size: 100% 100%;
+    }
+    
+    .container {
+        justify-content: center;
+    }
+
+    .login-box {
+        width: 100%;
+    }
+
+    #slogan {
+        display: none;
+    }
+}
